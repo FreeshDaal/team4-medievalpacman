@@ -1,4 +1,8 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,10 +13,14 @@ public class GameManager : MonoBehaviour
     public int ghostMultiplier { get; private set; } = 1;
     public int score { get; private set; }
     public int lives { get; private set; }
+    public TextMeshProUGUI GameOverText;
+
+    
 
     private void Start()
     {
         NewGame();
+        GameOverText.enabled = false;
     }
 
     private void Update()
@@ -28,6 +36,7 @@ public class GameManager : MonoBehaviour
         SetScore(0);
         SetLives(3);
         NewRound();
+        GameOverText.enabled = false;
     }
 
     private void NewRound()
@@ -53,12 +62,20 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        GameOverText.enabled = true;
         for (int i = 0; i < this.ghosts.Length; i++)
         {
             this.ghosts[i].gameObject.SetActive(false);
         }
 
         this.pacman.gameObject.SetActive(false);
+
+       StartCoroutine(endscreen());
+    }
+    IEnumerator endscreen()
+    {
+        yield return new WaitForSecondsRealtime(5);
+        SceneManager.LoadScene("Menu");
     }
 
     private void SetScore(int score)
