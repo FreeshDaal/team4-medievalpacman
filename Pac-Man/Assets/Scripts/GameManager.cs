@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
             pellet.gameObject.SetActive(true);
         }
 
-        ResetState();
     }
 
     private void ResetState()
@@ -119,8 +118,7 @@ public class GameManager : MonoBehaviour
 
         if (!HasRemainingPellets())
         {
-            this.pacman.gameObject.SetActive(false);
-            Invoke(nameof(NewRound), 3.0f);
+         SceneManager.LoadScene("Pacman 2");
         }
     }
 
