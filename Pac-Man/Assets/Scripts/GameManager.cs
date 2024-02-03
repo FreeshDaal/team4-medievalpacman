@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+
 public class GameManager : MonoBehaviour
 {
     public Ghost[] ghosts;
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int score { get; private set; }
     public int lives { get; private set; }
     public TextMeshProUGUI GameOverText;
+    public TextMeshProUGUI YouWinText;
 
     
 
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         NewGame();
         GameOverText.enabled = false;
+        YouWinText.enabled = false;
     }
 
     private void Update()
@@ -41,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void NewRound()
     {
+
         foreach (Transform pellet in this.pellets)
         {
             pellet.gameObject.SetActive(true);
@@ -114,11 +118,27 @@ public class GameManager : MonoBehaviour
     {
         pellet.gameObject.SetActive(false);
         Scoring.instance.AddPoint();
+        
         SetScore(this.score + pellet.points);
 
         if (!HasRemainingPellets())
         {
-         SceneManager.LoadScene("Pacman 2");
+            if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Pacman 2"))
+            {
+             YouWinText.enabled = true;
+
+                StartCoroutine(endscreen());
+    
+            IEnumerator endscreen()
+            {
+                yield return new WaitForSecondsRealtime(5);
+                SceneManager.LoadScene("Menu");
+            }
+            }
+            else
+            {
+                SceneManager.LoadScene("Pacman 2");
+            }
         }
     }
 

@@ -27,7 +27,7 @@ public class Scoring : MonoBehaviour
 
     public void AddPoint()
     {
-        score += 1;
+        score += 100;
         scoreText.text = "SCORE: " + score.ToString();
         if (highscore < score)
         {
