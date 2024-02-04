@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI GameOverText;
     public TextMeshProUGUI YouWinText;
 
+    public AudioClip WinMusic;
+    public AudioClip LoseMusic;
+
+
     
 
     private void Start()
@@ -65,6 +69,9 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        GetComponent<AudioSource>().clip = LoseMusic;
+            GetComponent<AudioSource>().Play();
+
         GameOverText.enabled = true;
         for (int i = 0; i < this.ghosts.Length; i++)
         {
@@ -126,6 +133,8 @@ public class GameManager : MonoBehaviour
             if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Pacman 2"))
             {
              YouWinText.enabled = true;
+             GetComponent<AudioSource>().clip = WinMusic;
+            GetComponent<AudioSource>().Play();
 
                 StartCoroutine(endscreen());
     

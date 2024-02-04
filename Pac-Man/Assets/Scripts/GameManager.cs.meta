@@ -3,7 +3,13 @@ guid: f285c598b10515d458003464d6cc36e0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pacman: {instanceID: 0}
+  - pellets: {instanceID: 0}
+  - GameOverText: {instanceID: 0}
+  - YouWinText: {instanceID: 0}
+  - WinMusic: {fileID: 8300000, guid: 840885ebbc6943d4586f616dd0e5644b, type: 3}
+  - LoseMusic: {fileID: 8300000, guid: 7c20211b9787b5141a11e12c5cb40815, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
