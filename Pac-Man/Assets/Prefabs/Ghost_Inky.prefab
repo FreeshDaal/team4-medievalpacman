@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 302444620872875800, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.22939733
+      objectReference: {fileID: 0}
+    - target: {fileID: 302444620872875800, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.22939733
+      objectReference: {fileID: 0}
+    - target: {fileID: 302444620872875800, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.22939733
+      objectReference: {fileID: 0}
+    - target: {fileID: 302592377712724066, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 714173935, guid: 0e8dfc116998daf4eb385c3b17835f36, type: 3}
     - target: {fileID: 302592377712724066, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
       propertyPath: m_Color.g
       value: 0.99215686
@@ -60,13 +76,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4033454965379932662, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 714173935, guid: 0e8dfc116998daf4eb385c3b17835f36, type: 3}
+    - target: {fileID: 4033454965379932662, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 714173935, guid: 0e8dfc116998daf4eb385c3b17835f36, type: 3}
     - target: {fileID: 5108285704900217107, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7391304e6dcdc594484288107bfd217f, type: 3}
     - target: {fileID: 6284167014117937429, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
       propertyPath: m_Name
-      value: Ghost_Base Variant
+      value: Ghost_Inky
       objectReference: {fileID: 0}
     - target: {fileID: 7792329800042019502, guid: de941a2af3d7568438fc7551ca54b4e6, type: 3}
       propertyPath: initialDirection.y

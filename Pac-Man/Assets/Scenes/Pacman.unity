@@ -8251,6 +8251,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1707098850504832811, guid: c4175ee6735e1bc47a90f63a50782010, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 863447501, guid: 0e8dfc116998daf4eb385c3b17835f36, type: 3}
+    - target: {fileID: 1707098850504832811, guid: c4175ee6735e1bc47a90f63a50782010, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 863447501, guid: 0e8dfc116998daf4eb385c3b17835f36, type: 3}
+    - target: {fileID: 2628526159312068287, guid: c4175ee6735e1bc47a90f63a50782010, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 863447501, guid: 0e8dfc116998daf4eb385c3b17835f36, type: 3}
+    - target: {fileID: 2628729374044203461, guid: c4175ee6735e1bc47a90f63a50782010, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20451
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628729374044203461, guid: c4175ee6735e1bc47a90f63a50782010, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20451
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628729374044203461, guid: c4175ee6735e1bc47a90f63a50782010, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.20451
+      objectReference: {fileID: 0}
     - target: {fileID: 2917762080394139607, guid: c4175ee6735e1bc47a90f63a50782010, type: 3}
       propertyPath: inside
       value: 
@@ -8517,6 +8541,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8208048079428647707, guid: 3fecfbcda5f72fd428829ce95a476c0a, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -614282054, guid: 0e8dfc116998daf4eb385c3b17835f36, type: 3}
+    - target: {fileID: 8208048079428647707, guid: 3fecfbcda5f72fd428829ce95a476c0a, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -614282054, guid: 0e8dfc116998daf4eb385c3b17835f36, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
