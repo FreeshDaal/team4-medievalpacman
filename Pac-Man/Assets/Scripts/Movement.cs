@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
     public Vector2 direction { get; private set; }
     public Vector2 nextDirection { get; private set; }
     public Vector3 startingPosition { get; private set; }
+    private float timeInSamePosition = 0f;
+    private const float maxTimeInSamePosition = 3.5f;
 
     private void Awake()
     {
@@ -34,11 +36,23 @@ public class Movement : MonoBehaviour
     }
 
     private void Update()
+    {   
+    if (this.nextDirection != Vector2.zero)
     {
-        if(this.nextDirection != Vector2.zero)
+        SetDirection(this.nextDirection);
+        timeInSamePosition = 0f; 
+    }
+    else
+    {
+        timeInSamePosition += Time.deltaTime;
+
+       
+        if (timeInSamePosition >= maxTimeInSamePosition)
         {
-            SetDirection(this.nextDirection);
+            MoveInRandomDirection();
+            timeInSamePosition = 0f; 
         }
+    }
     }
 
     private void FixedUpdate()
@@ -67,5 +81,10 @@ public class Movement : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(this.transform.position, Vector2.one * 0.75f, 0.0f, direction, 1.5f, this.obstacleLayer);
         return hit.collider != null;
     }
-
+    private void MoveInRandomDirection()
+{
+    // Code to move in a random direction
+    Vector2 randomDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+    SetDirection(randomDirection, true);
+}
 }

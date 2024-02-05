@@ -10130,6 +10130,10 @@ PrefabInstance:
       propertyPath: initialBehaviour
       value: 
       objectReference: {fileID: 923760288}
+    - target: {fileID: 3100514105046567359, guid: caef4fab007a72f40a9d9a28d4baa03f, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5697139414975509019, guid: caef4fab007a72f40a9d9a28d4baa03f, type: 3}
       propertyPath: inside
       value: 
